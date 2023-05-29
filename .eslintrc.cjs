@@ -11,5 +11,6 @@ module.exports = {
   plugins: ['react-refresh', 'react-recommended'],
   rules: {
     'react-refresh/only-export-components': 'warn',
+    "react/prop-types":"off"
   },
 }
