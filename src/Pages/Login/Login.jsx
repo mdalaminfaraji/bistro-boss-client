@@ -10,7 +10,8 @@ const Login = () => {
     const [disabled, setDisabled]=useState(true);
     const navigate=useNavigate();
     const location=useLocation();
-    const from=location.state?.pathname || "/";
+    console.log(location);
+    const from=location.state?.from?.pathname || "/";
 
     const {signIn}=useContext(AuthContext);
     useEffect(()=>{
@@ -91,7 +92,8 @@ const Login = () => {
           
         </div>
         <div className="form-control mt-6">
-         <input disabled={disabled} type="submit" value="Submit"  className='btn btn-primary'/>
+        {/* TODO:make button disabled for captcha */}
+         <input disabled={false} type="submit" value="Submit"  className='btn btn-primary'/>
         </div>
       </form>
       <p>New Here? <Link to="/signup">Create an  account</Link></p>
